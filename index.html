@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link rel="shortcut icon" href="icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="level">
+        <select name="level" id="level" value = easy>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+
+        <button type="submit" class = "solutionBtn" onclick=showsolution(filledBoard,clueList)>Solution</button>
+        <button type="submit" class = "resetBtn" onclick=setfun(clueList) ondblclick = window.location.reload()>Reset</button>
+    </div>
+    <div class="sudokuContainer"></div>
+
+        <div class="submitBtn">
+           <button class="hint" onclick = hintFun(remainingHint)></button>
+           <button class="sudokuSolver" onclick = sudokuSolver01()>Sudoku Solver</button>
+            <button type="submit" class = "submit" onclick = findSolution()>Find Solution</button>
+        </div>
+
+        <div class="remLive">Lives</div>
+        <div class="remainingWrongEntry">5</div>
+    <script src="hint.js"></script>
+    <script src="sudoku_Solver.js"></script>
+    <script src="script.js"></script>
+    <script src="btnFunctionality.js"></script>
+    <script src="findSolution.js"></script>
+</body>
+</html>

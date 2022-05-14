@@ -1,0 +1,152 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(sudoku.jpg);
+    
+}
+
+.level ,.submitBtn{
+    width: calc(27rem);
+    height: 2rem;
+    margin: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.level *, .submitBtn *{
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
+}
+
+#level{
+    background-color: #d2dae2;
+    opacity: 0.6;
+}
+
+
+.sudokuContainer{
+    height: calc(27rem + 30px);
+    width: calc(27rem + 30px);
+    box-sizing: content-box;
+    border: 5px solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.box{
+    height: 9rem;
+    width: 9rem;
+    box-sizing: content-box;
+    border: 5px solid;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell{
+    height: 3rem;
+    width: 3rem;
+    border: 1px solid;
+}
+
+.input{
+    height: 100%;
+    width: 100%;
+    font-size: 150%;
+    text-align: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    will-change: scroll-position;
+    -moz-appearance: textfield;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:hover{
+    background-color: cornflowerblue;
+    opacity: 0.5;
+}
+
+.clue{
+    background-color: #636e72;
+}
+
+.select{
+
+color: #cad1d8;
+    background: #232526;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.wrongSelection{
+    background-color: tomato;
+    opacity: 1;
+}
+.green{
+    background-color: green;
+}
+
+.remLive{
+    height: 2.5rem;
+    width: 6rem;
+    position: fixed;
+    top: 5rem;
+    right: 2rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #dfe6e9;
+}
+
+.remainingWrongEntry{
+    height: 3rem;
+    width: 3rem;
+    position: fixed;
+    right: 5rem;
+    top: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    background: #e53935;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #e35d5b, #e53935);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #e35d5b, #e53935); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+button:hover{
+    background-color: #e67e22;
+}
+
+button{
+    background-color: #cad1d8   ;
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+}
+
